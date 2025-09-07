@@ -1,5 +1,6 @@
-import AnimatedTitle from "./AnimatedTitle"
-import Button from "./Button"
+import { CONTACT_TEXT } from "../constans/texts"
+import AnimatedTitle from "./shared/AnimatedTitle"
+import Button from "./shared/Button"
 
 function Contact() {
     return (
@@ -9,17 +10,17 @@ function Contact() {
             <div className="relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden">
                 <div className="flex flex-col items-center text-center">
                     <p className="mb-10 font-general text-2xl uppercase">
-                        Junte-se a nós
+                        {CONTACT_TEXT.up_text}
                     </p>
 
                     <AnimatedTitle
-                        title="Vamos construir um novo caminho de possibilidades"
+                        title= {CONTACT_TEXT.main_text}
                         containerClass="special-font !text-3xl !md:text-2xl w-full font-zentry !font-black !leading-[.9]"
                     />
 
                     <Button 
                     id="contact-button"
-                    title="Entre em contato" 
+                    title={CONTACT_TEXT.button_text}
                     containerClass="mt-10 cursor-pointer" />
                     
                 </div>

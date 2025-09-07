@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import Button from "./Button";
+import Button from "./shared/Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all";
+import { EXTERNAL_LINKS } from "../constans/links";
+import { HERO_TEXT } from "../constans/texts";
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -195,16 +198,16 @@ function Hero() {
         {/* textos dentro do vídeo */}
         <div className="absolute left-0 z-50 w-full">
           <div className="mt-35 px-5 sm:px-10">
-            <h1 className="text-white font-bold text-5xl">Projeto Foguete</h1>
+            <h1 className="text-white font-bold text-5xl"> {HERO_TEXT.title}</h1>
             <p className="my-5 max-w-md text-white">
-              Um projeto realizado a fim de aplicar o aprendizado em robotico
+             {HERO_TEXT.content}
             </p>
             <Button
               id="watch-trailer"
               title="Acesse o github do projeto"
               leftIcon={<TiLocationArrow />}
               containerClass="bg-yellow-300 flex-center gap-1"
-              onClickButton={()=>window.location.href="#"}
+              onClickButton={()=>window.location.href=EXTERNAL_LINKS.github}
             />
           </div>
         </div>
@@ -212,7 +215,7 @@ function Hero() {
 
 
         <h1 className="mix-blend-exclusion bg-blend-difference absolute bottom-5 right-5 uppercase font-black sm:right-10 sm:text-2xl md:text-3xl lg:text-5xl z-[60] pointer-events-none">
-          Incubadora Maricá
+          {HERO_TEXT.right_label}
         </h1>
     </div>
   );

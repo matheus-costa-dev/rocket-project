@@ -1,7 +1,8 @@
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/all"
-import AnimatedTitle from "./AnimatedTitle"
+import AnimatedTitle from "./shared/AnimatedTitle"
+import { ABOUT_TEXT } from "../constans/texts"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -30,16 +31,15 @@ function About() {
     return (
         <div id="sobre" className="min-h-screen w-screen text-black">
             <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-                <h2 className="text-sm uppercase md:text-4xl">Bem vindo ao projeto</h2>
+                <h2 className="text-sm uppercase md:text-4xl">{ABOUT_TEXT.static_title}</h2>
 
                 <AnimatedTitle
-                    title="O futuro da robotica"
+                    title={ABOUT_TEXT.dynamic_title}
                     containerClass="mt-5 !text-black"
                 />
 
                 <div className="absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem]">
-                    <p>A jornada rumo ao espaço começa aqui</p>
-                    <p>Unindo robótica, inovação e exploração sem limites</p>
+                    <p>{ABOUT_TEXT.below_text}</p>
                 </div>
             </div>
 

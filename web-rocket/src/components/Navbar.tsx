@@ -1,16 +1,11 @@
 import { useEffect, useRef, useState } from "react"
-import Button from "./Button"
+import Button from "./shared/Button"
 import { TiLocationArrow } from "react-icons/ti"
 import { useWindowScroll } from "react-use"
 import gsap from "gsap"
+import { EXTERNAL_LINKS } from "../constans/links"
+import { NAV_ITEMS } from "../constans/texts"
 
-const navItems = [
-    {name: "Home", href:"video-frame"},
-    {name: "Sobre", href:"sobre"},
-    {name: "Informações", href:"info"},
-    {name: "Polo", href:"polo"},
-    {name: "Contato", href:"contato"},
-]
 
 function Navbar() {
 
@@ -78,12 +73,12 @@ function Navbar() {
                             title="Acesse"
                             rightIcon={<TiLocationArrow />}
                             containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
-                            onClickButton={()=>window.location.href="https://incubacultura.org.br/"}
+                            onClickButton={()=>window.location.href=EXTERNAL_LINKS.incubadora}
                         />
                     </div>
                     <div className="flex h-full items-center">
                         <div className="hidden md:block">
-                            {navItems.map((item, index) => (
+                            {NAV_ITEMS.map((item, index) => (
                                 <a
                                     className="relative ms-10 font-general text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer"
                                     href={`#${item.href.toLocaleLowerCase()}`}

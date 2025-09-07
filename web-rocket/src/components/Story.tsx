@@ -1,8 +1,9 @@
 import { useRef } from "react"
-import AnimatedTitle from "./AnimatedTitle"
+import AnimatedTitle from "./shared/AnimatedTitle"
 import gsap from "gsap";
-import RoundedCorners from "./RoundedCorners";
-import Button from "./Button";
+import RoundedCorners from "./shared/RoundedCorners";
+import Button from "./shared/Button";
+import { STORY_TEXT } from "../constans/texts";
 
 function Story() {
 
@@ -51,10 +52,10 @@ function Story() {
             className="min-h-screen w-full bg-black text-blue-50 overflow-hidden"
         >
             <div className="flex size-full flex-col items-center py-10">
-                <p className="text-sm uppercase md:text-[10px]">Iniciativa de aprendizado</p>
+                <p className="text-sm uppercase md:text-[10px]">{STORY_TEXT.pre_title}</p>
                 <div className="relative size-full">
                     <AnimatedTitle
-                        title="Futuro de"
+                        title={STORY_TEXT.title}
                         sectionId="#story"
                         containerClass="my-5 pb-20 pointer-events-none mix-blend-difference relative z-10"
                     />
@@ -93,11 +94,11 @@ function Story() {
                 <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
                     <div className="flex h-full w-fit flex-col items-center md:items-start">
                         <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
-                            Onde novas ideias e oportunidades ganham vida
+                            {STORY_TEXT.below_text}
                         </p>
                         <Button
                             id="realm-button"
-                            title="Descubra novas possibilidades"
+                            title={STORY_TEXT.button_title}
                             containerClass="mt-5"
                         />
                     </div>

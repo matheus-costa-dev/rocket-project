@@ -1,6 +1,6 @@
-import { TiLocationArrow } from "react-icons/ti"
-import BentoCard from "./BentoCard"
-import BentoTilt from "./BentoTilt"
+import BentoCard from "./shared/BentoCard"
+import BentoTilt from "./shared/BentoTilt"
+import { FEATURES_TEXT } from "../constans/texts"
 
 function Features() {
     return (
@@ -8,21 +8,19 @@ function Features() {
             <div className="container mx-auto px-3 md:px-10">
                 <div className="px-5 py-32">
                     <p className="text-lg text-blue-50">
-                        Explorando a Robótica
+                        {FEATURES_TEXT.above_card.title}
                     </p>
 
                     <p className="max-w-md text-lg text-blue-50 opacity-50">
-                        Mergulhe em um universo científico em constante expansão,
-                        onde tecnologia, inovação e engenharia se unem em uma
-                        experiência integrada que transforma o seu mundo.
+                        {FEATURES_TEXT.above_card.text}
                     </p>
                 </div>
 
                 <BentoTilt className="border border-white/20 relative mb-7 h-96 w-full overflow-hidden rounded-sm md:h-[65vh]">
                     <BentoCard
                         src="videos/feature-1.mp4"
-                        title={<>Mat<b>e</b>riais</>}
-                        description="Estrutura do foguete, Arduino, sensores, bateria, módulos de comunicação e todos os componentes utilizados no projeto."
+                        title={FEATURES_TEXT.cards.up_card.title}
+                        description={FEATURES_TEXT.cards.up_card.description}
                     />
                 </BentoTilt>
 
@@ -30,8 +28,8 @@ function Features() {
                     <BentoTilt className="flex flex-col gap-4">
                         <BentoCard
                             src="videos/feature-2.mp4"
-                            title={<>Proj<b>e</b>tos</>}
-                            description="Lista completa de projetos criados no universo da robótica e exploração."
+                            title={FEATURES_TEXT.cards.left1_card.title}
+                            description={FEATURES_TEXT.cards.left1_card.description}
                         />
 
                     </BentoTilt>
@@ -41,8 +39,8 @@ function Features() {
                         <BentoTilt>
                             <BentoCard
                                 src="videos/feature-3.mp4"
-                                title={<>Participantes</>}
-                                description="Todos que colaboraram pra tornar esse projeto possível."
+                                title={FEATURES_TEXT.cards.right1_card.title}
+                                description={FEATURES_TEXT.cards.right1_card.description}
                                 containerClassTitle="sm:!text-4xl"
                                 containerClassDescription="text-black font-bold"
                             />
@@ -51,8 +49,8 @@ function Features() {
                         <BentoTilt>
                             <BentoCard
                                 src="videos/feature-4.mp4"
-                                title={<>Parcerias</>}
-                                description="Instituições e apoiadores que financiaram e tornaram este projeto possível."
+                                title={FEATURES_TEXT.cards.right2_card.title}
+                                description={FEATURES_TEXT.cards.right2_card.description}
                                 containerClassTitle="sm:!text-4xl"
                                 containerClassDescription="text-black font-bold"
                             />
@@ -68,9 +66,9 @@ function Features() {
                     <BentoTilt className="bg-violet-900 w-full md:w-1/2 h-full flex flex-col justify-between">
                         <div className="flex flex-col justify-between h-full mt-3 ml-1">
                             <h1 className="font-black text-3xl text-black mt-3 ml-1 self-start flex-wrap w-1/3">
-                                mais em breve
+                                {FEATURES_TEXT.cards.left2_card.title}
                             </h1>
-                            <TiLocationArrow className="text-3xl m-3 self-end text-black" />
+                            {FEATURES_TEXT.cards.left2_card.element}
                         </div>
                     </BentoTilt>
 
@@ -79,8 +77,8 @@ function Features() {
                     <BentoTilt className="w-full md:w-1/2 h-full">
                         <BentoCard
                             src="videos/feature-5.mp4"
-                            title={<>Incubadora Maricá</>}
-                            description="Venha aprender e inovar"
+                            title={FEATURES_TEXT.cards.right3_card.title}
+                            description={FEATURES_TEXT.cards.right3_card.description}
                             containerClassTitle="sm:!text-4xl"
                         />
 
