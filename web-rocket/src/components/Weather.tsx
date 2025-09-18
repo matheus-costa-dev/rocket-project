@@ -40,7 +40,7 @@ function Weather() {
         const apiKey = "a69334c28e1542a8aa8185424242611";
         const city = "marica";
         const lang = "pt";
-        const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&lang=${lang}&aqi=no`;
+        const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&lang=${lang}&aqi=no`;
 
         const res = await fetch(url);
         if (res.status !== 200) {
