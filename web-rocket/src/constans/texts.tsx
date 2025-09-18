@@ -2,6 +2,7 @@ import { TiLocationArrow } from "react-icons/ti"
 
 export const NAV_ITEMS = [
     {name: "Home", href:"video-frame"},
+    {name: "Clima", href: "climate"},
     {name: "Sobre", href:"sobre"},
     {name: "Informações", href:"info"},
     {name: "Polo", href:"polo"},
